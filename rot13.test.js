@@ -7,3 +7,7 @@ test('rot13 produces empty string given empty string', function() {
 test('rot13 produce n given a', function() {
 	expect(rot13("a")).toBe("n")
 })
+
+test('rot13 produce a given n', function() {
+	expect(rot13("n")).toBe("a")
+})
