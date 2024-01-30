@@ -4,9 +4,17 @@ module.exports = function rot13(input) {
 	}
 	const charCode = input.charCodeAt(0)
 
-	if (charCode >= "a".charCodeAt(0) && charCode <= "m".charCodeAt(0)) {
+	if (isBetween(charCode, "a", "m")) {
 		return String.fromCharCode(charCode + 13)
-	} else if (charCode >= "n".charCodeAt(0) && charCode <= "z".charCodeAt(0)) {
+	} else if (isBetween(charCode, "n", "z")) {
 		return String.fromCharCode(charCode - 13)
 	}
+}
+
+function charCodeFor(letter) {
+	return letter.charCodeAt(0)
+}
+
+function isBetween(charCode, firstLetter, lastLetter) {
+	return charCode >= charCodeFor(firstLetter) && charCode <= charCodeFor(lastLetter)
 }
