@@ -11,3 +11,7 @@ test('rot13 produce n given a', function() {
 test('rot13 produce a given n', function() {
 	expect(rot13("n")).toBe("a")
 })
+
+test('rot13 produce N given A', function() {
+	expect(rot13("A")).toBe("N")
+})
