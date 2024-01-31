@@ -8,6 +8,8 @@ module.exports = function rot13(input) {
 		return String.fromCharCode(charCode + 13)
 	} else if (isBetween(charCode, "n", "z") || isBetween(charCode, "N", "Z")) {
 		return String.fromCharCode(charCode - 13)
+	} else {
+		return input
 	}
 }
 
