@@ -2,8 +2,13 @@ module.exports = function rot13(input) {
 	if (input === "") {
 		return ""
 	}
-	const charCode = input.charCodeAt(0)
-	return transformLetter(charCode)
+
+	let result = ""
+	for (let i = 0; i < input.length; i++) {
+		const charCode = input.charCodeAt(i)
+		result += transformLetter(charCode)
+	}
+	return result
 }
 
 function transformLetter(charCode) {
