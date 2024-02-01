@@ -3,13 +3,16 @@ module.exports = function rot13(input) {
 		return ""
 	}
 	const charCode = input.charCodeAt(0)
+	return transformLetter(charCode)
+}
 
+function transformLetter(charCode) {
 	if (isBetween(charCode, "a", "m") || isBetween(charCode, "A", "M")) {
 		return String.fromCharCode(charCode + 13)
 	} else if (isBetween(charCode, "n", "z") || isBetween(charCode, "N", "Z")) {
 		return String.fromCharCode(charCode - 13)
 	} else {
-		return input
+		return String.fromCharCode(charCode)
 	}
 }
 
