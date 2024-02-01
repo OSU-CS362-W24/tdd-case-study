@@ -47,3 +47,9 @@ test('rot13 produce rotated lowercase alphabet given lowercase alphabet', functi
 test('rot13 produce rotated uppercase alphabet given uppercase alphabet', function() {
 	expect(rot13("ABCDEFGHIJKLMNOPQRSTUVWXYZ")).toBe("NOPQRSTUVWXYZABCDEFGHIJKLM")
 })
+
+test('rot13 throws an appropriate error given a non-string input', function() {
+	expect(function() {
+		rot13(15)
+	}).toThrow("Expected string parameter")
+})
