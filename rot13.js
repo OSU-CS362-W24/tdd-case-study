@@ -1,4 +1,8 @@
 module.exports = function rot13(input) {
+	if (input === undefined || typeof input !== "string" ) {
+		throw new Error("Expected string parameter")
+	}
+
 	let result = ""
 	for (let i = 0; i < input.length; i++) {
 		const charCode = input.charCodeAt(i)
