@@ -53,3 +53,7 @@ test('rot13 throws an appropriate error given a non-string input', function() {
 		rot13(15)
 	}).toThrow("Expected string parameter")
 })
+
+test('rot13 does not encrypt non-english unicode characters', function() {
+	expect(rot13("ñåéîøüç")).toBe("ñåéîøüç")
+})
