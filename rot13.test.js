@@ -39,3 +39,7 @@ test('rot13 produce @ given @', function() {
 test('rot13 produce [ given [', function() {
 	expect(rot13("[")).toBe("[")
 })
+
+test('rot13 produce nop given abc', function() {
+	expect(rot13("abc")).toBe("nop")
+})
