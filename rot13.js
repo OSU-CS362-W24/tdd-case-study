@@ -1,8 +1,4 @@
 module.exports = function rot13(input) {
-	if (input === "") {
-		return ""
-	}
-
 	let result = ""
 	for (let i = 0; i < input.length; i++) {
 		const charCode = input.charCodeAt(i)

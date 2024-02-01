@@ -40,6 +40,10 @@ test('rot13 produce [ given [', function() {
 	expect(rot13("[")).toBe("[")
 })
 
-test('rot13 produce nop given abc', function() {
-	expect(rot13("abc")).toBe("nop")
+test('rot13 produce rotated lowercase alphabet given lowercase alphabet', function() {
+	expect(rot13("abcdefghijklmnopqrstuvwxyz")).toBe("nopqrstuvwxyzabcdefghijklm")
+})
+
+test('rot13 produce rotated uppercase alphabet given uppercase alphabet', function() {
+	expect(rot13("ABCDEFGHIJKLMNOPQRSTUVWXYZ")).toBe("NOPQRSTUVWXYZABCDEFGHIJKLM")
 })
